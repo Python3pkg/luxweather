@@ -4,7 +4,7 @@ tweetweather
 
 ## Screenshot
 
-<img src="https://raw.github.com/c0ding/WDCiNFO/master/doc/screenshot.png" alt="tweetweather_screenshot" title="tweetweather_screenshot">
+<img src="https://raw.github.com/c0ding/tweetweather/master/doc/screenshot.png" alt="tweetweather_screenshot" title="tweetweather_screenshot">
 
 ## License
 
