@@ -1,10 +1,15 @@
-=============================
 LuxWeather
 =============================
 
 ## Screenshot
 
 <img src="https://raw.github.com/c0ding/LuxWeather/master/doc/screenshot.png" alt="tweetweather_screenshot" title="tweetweather_screenshot">
+
+## Installation:
+
+    $ python setup.py install
+    
+Edit the config.py file to suit your needs.
 
 ## License
 
@@ -29,3 +34,13 @@ LuxWeather
 ## Useful links
 
 * [@Luxweather](https://twitter.com/LuxWeather)
+
+## Buy me a coffee?
+
+If you feel like buying me a coffee (or a beer?), donations are welcome:
+
+```
+WDC : WbcWJzVD8yXt3yLnnkCZtwQo4YgSUdELkj
+HBN : F2Zs4igv8r4oJJzh4sh4bGmeqoUxLQHPki
+DOGE: DRBkryyau5CMxpBzVmrBAjK6dVdMZSBsuS
+```
