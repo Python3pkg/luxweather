@@ -1,4 +1,4 @@
-LuxWeather
+luxweather
 =============================
 
 [![PyPi Version](http://img.shields.io/pypi/v/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)   [![Downloads](http://img.shields.io/pypi/dm/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
@@ -15,7 +15,7 @@ From source use
 
 or install from PyPi
 
-    $ pip install coinmarketcap
+    $ pip install luxweather
 
 Edit the config.py file to suit your needs and create a cron job like this:
 
