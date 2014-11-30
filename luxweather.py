@@ -6,7 +6,7 @@ from lxml import etree
 from config import keys
 from config import settings
 
-__appname__ = "tweetweather"
+__appname__ = "luxweather"
 __version__ = "v.1.0"
 
 forecast_location = settings['location']

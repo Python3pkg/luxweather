@@ -1,15 +1,25 @@
 LuxWeather
 =============================
 
+[![PyPi Version](http://img.shields.io/pypi/v/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)   [![Downloads](http://img.shields.io/pypi/dm/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
+
 ## Screenshot
 
 <img src="https://raw.github.com/c0ding/LuxWeather/master/doc/screenshot.png" alt="tweetweather_screenshot" title="tweetweather_screenshot">
 
 ## Installation:
 
+From source use
+
     $ python setup.py install
-    
-Edit the config.py file to suit your needs.
+
+or install from PyPi
+
+    $ pip install coinmarketcap
+
+Edit the config.py file to suit your needs and create a cron job like this:
+
+    $ 30 * * * * python /path/to/luxweather.py
 
 ## License
 
