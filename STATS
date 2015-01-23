@@ -1,12 +1,12 @@
  Analyzing: https://github.com/c0ding/tweetweather/luxweather.py
 
-              Total Lines: 36
+              Total Lines: 38
 
-               Code Lines: 26 (72.2222%)
-              Blank Lines: 7 (19.4444%)
+               Code Lines: 29 (76.3157%)
+              Blank Lines: 6 (15.7894%)
 
-            Comment Lines: 1 (2.77777%)
-         Doc String Lines: 2 (5.55555%)
+            Comment Lines: 1 (2.63157%)
+         Doc String Lines: 2 (5.26315%)
           Inline Comments: 1
               Doc Strings: 2
            Total Comments: 4
@@ -24,8 +24,8 @@
            Try Statements: 1
         Except Statements: 1
          Print Statements: 1
-              Assignments: 12
-                Variables: 18
+              Assignments: 15
+                Variables: 21
 
 
  Done analyzing: https://github.com/c0ding/tweetweather/luxweather.py

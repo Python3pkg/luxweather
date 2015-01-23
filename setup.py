@@ -12,7 +12,7 @@ setup(
     author_email = 'me@martinsimon.me',
     license = 'Apache v2.0 License',
     packages = ['luxweather'],
-    description = 'D\'Lëtzebuerger Wieder op Twitter. Refresh ass all Stonn. Mat vill ♥ geschriwwen vum @c0ding',
+    description = 'luxweather is an APACHE licensed Twitter weather bot written in Python',
     long_description = file('README.md','r').read(),
-    keywords = ['weather forecast', 'forecast', 'Yahoo Weather', 'Luxembourg'],
+    keywords = ['weather forecast', 'forecast', 'Yahoo Weather', 'Luxembourg', 'twitter'],
 )

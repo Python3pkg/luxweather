@@ -1,11 +1,10 @@
-luxweather
-=============================
+<h1><img src="https://raw.github.com/c0ding/luxweather/master/doc/luxweather.png" height=55 alt="luxweather" title="luxweather"> luxweather</h1>
 
-[![PyPi Version](http://img.shields.io/pypi/v/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)   [![Downloads](http://img.shields.io/pypi/dm/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
+[![PyPi Version](http://img.shields.io/pypi/v/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
+[![Downloads](http://img.shields.io/pypi/dm/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
+[![Code Health](https://landscape.io/github/c0ding/luxweather/master/landscape.svg)](https://landscape.io/github/c0ding/luxweather/master)
 
-## Screenshot
-
-<img src="https://raw.github.com/c0ding/LuxWeather/master/doc/screenshot.png" alt="tweetweather_screenshot" title="tweetweather_screenshot">
+**luxweather** is an APACHE licensed [Twitter](https://twitter.com) weather bot written in Python. It is designed to tweet weather conditions and forecasts from [Yahoo! Weather](https://weather.yahoo.com/).
 
 ## Installation:
 

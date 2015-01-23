@@ -6,8 +6,11 @@ from lxml import etree
 from config import keys
 from config import settings
 
-__appname__ = "luxweather"
-__version__ = "v.1.0"
+__title__ = 'luxweather'
+__version__ = 'v.1.0'
+__author__ = '@c0ding'
+__repo__ = 'https://github.com/c0ding/luxweather'
+__license__ = 'Apache v2.0 License'
 
 forecast_location = settings['location']
 temp_units = settings['units']
@@ -30,7 +33,6 @@ def post_tweet():
 		api.update_status(tweet)
 	except tw.TweepError as error:
 		print "Error occured: %s" % error
-		
+
 if __name__ == '__main__':
 	post_tweet()
-	
