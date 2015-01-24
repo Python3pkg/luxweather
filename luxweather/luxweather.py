@@ -7,7 +7,7 @@ from config import keys
 from config import settings
 
 __title__ = 'luxweather'
-__version__ = 'v.1.0'
+__version__ = 'v.1.0.1'
 __author__ = '@c0ding'
 __repo__ = 'https://github.com/c0ding/luxweather'
 __license__ = 'Apache v2.0 License'
