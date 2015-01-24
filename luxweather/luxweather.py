@@ -7,7 +7,7 @@ from config import keys
 from config import settings
 
 __title__ = 'luxweather'
-__version__ = 'v.1.0.1'
+__version__ = 'v.1.0'
 __author__ = '@c0ding'
 __repo__ = 'https://github.com/c0ding/luxweather'
 __license__ = 'Apache v2.0 License'
@@ -29,7 +29,7 @@ def post_tweet():
 	auth.set_access_token(keys['access_token'], keys['access_secret'])
 	api = tw.API(auth)
 	try:
-		tweet = "Today's weather conditions for #Luxembourg:\n\n" + "Current: " + "{0}°C and {1}".format(temp, condition) + \"\n" + "Previsions: "+"low {0}°C, high {1}°C".format(low, high)
+		tweet = "Today's weather conditions for #Luxembourg:\n\n" + "Current: " + "{0}°C and {1}".format(temp, condition) + "\n" + "Previsions: "+"low {0}°C, high {1}°C".format(low, high)
 		api.update_status(tweet)
 	except tw.TweepError as error:
 		print "Error occured: %s" % error
