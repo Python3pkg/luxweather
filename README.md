@@ -1,10 +1,8 @@
-<h1><img src="https://raw.github.com/c0ding/luxweather/master/doc/luxweather.png" height=55 alt="luxweather" title="luxweather"> luxweather</h1>
+<h1><img src="https://raw.github.com/mrsmn/luxweather/master/doc/luxweather.png" height=55 alt="luxweather" title="luxweather"> luxweather</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
-[![Downloads](http://img.shields.io/pypi/dm/luxweather.svg)](https://pypi.python.org/pypi/luxweather/)
-[![Code Health](https://landscape.io/github/c0ding/luxweather/master/landscape.svg)](https://landscape.io/github/c0ding/luxweather/master)
 
-**luxweather** is an APACHE licensed [Twitter](https://twitter.com) weather bot written in Python. It is designed to tweet weather conditions and forecasts from [Yahoo! Weather](https://weather.yahoo.com/).
+**luxweather** is an APACHE licensed [Twitter](https://twitter.com) weather bot written in Python. It is designed to tweet weather conditions and forecasts from [Dark Sky](https://darksky.net/).
 
 ## Installation:
 
@@ -24,7 +22,7 @@ Edit the config.py file to suit your needs and create a cron job like this:
 
 ```
   Apache v2.0 License
-  Copyright 2014-2015 Martin Simon
+  Copyright 2014-2016 Martin Simon
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

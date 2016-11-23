@@ -1,38 +1,40 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import json
+import urllib2
 import tweepy as tw
-from lxml import etree
-from config import keys
 from config import settings
 
 __title__ = 'luxweather'
-__version__ = 'v.1.0.1'
-__author__ = '@c0ding'
-__repo__ = 'https://github.com/c0ding/luxweather'
+__version__ = 'v.1.1'
+__author__ = 'Martin Simon <me@martinsimon.me>'
+__repo__ = 'https://github.com/mrsmn/luxweather'
 __license__ = 'Apache v2.0 License'
 
-forecast_location = settings['location']
-temp_units = settings['units']
+BASE_URL = "https://api.darksky.net/forecast/{0}/{1},{2}?units=si&exclude=minutely,hourly,alerts,flags".format(settings['darksky_api_key'], settings['latitude'], settings['longitude'])
 
-def get(data):
-	""" Get the weather forecast from weather.yahoo.com. """
-	forecast_url = "http://weather.yahooapis.com/forecastrss?u={0}&w={1}".format(temp_units, forecast_location)
-	forecast_data = etree.parse(forecast_url)
-	return forecast_data.xpath('string(/rss/channel/{})'.format(data), namespaces = {'yweather': 'http://xml.weather.yahoo.com/ns/rss/1.0'})
-(temp, condition) = (get('item/yweather:condition[1]/@temp'), get('item/yweather:condition[1]/@text'))
-(day, low, high, text) = (get('item/yweather:forecast[1]/@day'), get('item/yweather:forecast[1]/@low'),get('item/yweather:forecast[1]/@high'), get('item/yweather:forecast[1]/@text'))
+def _http_get():
+    opener = urllib2.build_opener()
+    opener.addheaders.append(('Content-Type', 'application/json'))
+    opener.addheaders.append(('User-agent', 'luxweather - Twitter weather bot written in Python. (https://github.com/mrsmn/luxweather)'))
+    response = opener.open(BASE_URL).read()
+    return response
 
-def post_tweet():
-	""" Get everything on Twitter. """
-	auth = tw.OAuthHandler(keys['consumer_key'], keys['consumer_secret'])
-	auth.set_access_token(keys['access_token'], keys['access_secret'])
-	api = tw.API(auth)
-	try:
-		tweet = "Today's weather conditions for #Luxembourg:\n\n" + "Current: " + "{0}°C and {1}".format(temp, condition) + "\n" + "Previsions: "+"low {0}°C, high {1}°C".format(low, high)
-		api.update_status(tweet)
-	except tw.TweepError as error:
-		print "Error occured: %s" % error
+def post():
+    data = json.loads(_http_get())
+    low = int(data["currently"]["temperature"])
+    condition = data["currently"]["summary"]
+    daily_min = int(data["daily"]["data"][0]["temperatureMin"])
+    daily_max = int(data["daily"]["data"][0]["temperatureMax"])
+    auth = tw.OAuthHandler(settings['twitter_consumer_key'], settings['twitter_consumer_secret'])
+    auth.set_access_token(settings['twitter_access_token'], settings['twitter_access_secret'])
+    api = tw.API(auth)
+    try:
+        tweet = "Today's weather conditions for #Luxembourg:\n\n" + "Current: " + "{0}°C, {1}".format(low, condition) + "\n" + "Previsions: "+"low {0}°C, high {1}°C".format(daily_min, daily_max)
+        api.update_status(tweet)
+    except tw.TweepError as error:
+        print "Error occured: {0}".format(error)
 
 if __name__ == '__main__':
-	post_tweet()
+    post()
